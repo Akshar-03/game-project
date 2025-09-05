@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck586n4r6e51b"]
+
+[ext_resource type="Texture2D" uid="uid://c7kwp5iq1aula" path="res://assets/spacepixels-0.1.0/spacepixels-0.1.0/pixel_ship.png" id="1_gtp8l"]
+
+[node name="ememy" type="Node2D"]
+
+[node name="shipsprite" type="Sprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.254, 0.254)
+texture = ExtResource("1_gtp8l")
