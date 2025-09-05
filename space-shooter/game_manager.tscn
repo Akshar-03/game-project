@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfvfcyuuck1bh"]
+
+[ext_resource type="Texture2D" uid="uid://cm6nrk1iaxdn5" path="res://assets/background-blue.png" id="1_70yv6"]
+[ext_resource type="PackedScene" uid="uid://dw7ehmcv68i4b" path="res://entites/player/player.tscn" id="2_smx3j"]
+[ext_resource type="Texture2D" uid="uid://cahln8ue38d7f" path="res://assets/spacepixels-0.1.0/spacepixels-0.1.0/horizontal_bar_blue.png" id="3_o2178"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smx3j"]
+size = Vector2(212.957, 11.4097)
+
+[node name="gamemanager" type="Node2D"]
+scale = Vector2(1.87831, 1.02689)
+
+[node name="Backgroundsprite" type="Sprite2D" parent="."]
+position = Vector2(106.479, 292.144)
+scale = Vector2(0.532393, 1.46072)
+texture = ExtResource("1_70yv6")
+
+[node name="player" parent="." instance=ExtResource("2_smx3j")]
+position = Vector2(104.881, 560.917)
+scale = Vector2(1.04697, 1.64975)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(100.09, 506.384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6.38872, 0)
+shape = SubResource("RectangleShape2D_smx3j")
+
+[node name="HorizontalBarBlue" type="Sprite2D" parent="Area2D"]
+position = Vector2(6.38871, -2.5)
+scale = Vector2(1.63813, 0.5)
+texture = ExtResource("3_o2178")
