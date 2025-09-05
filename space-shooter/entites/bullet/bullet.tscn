@@ -1,19 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2i6bjhlgg3b4"]
+[gd_scene load_steps=4 format=3 uid="uid://b2i6bjhlgg3b4"]
 
+[ext_resource type="Script" uid="uid://b1l3r2g1n6yr1" path="res://entites/bullet/bullet.gd" id="1_51h2q"]
 [ext_resource type="Texture2D" uid="uid://cub6wv2jbgba4" path="res://assets/spacepixels-0.1.0/spacepixels-0.1.0/pixel_laser_yellow.png" id="1_hqtmv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtmv"]
-size = Vector2(2, 12)
+size = Vector2(2, 19)
 
 [node name="bullet" type="Node2D"]
+script = ExtResource("1_51h2q")
 
 [node name="PixelLaserYellow" type="Sprite2D" parent="."]
-position = Vector2(-7.15256e-07, -3.57628e-07)
-scale = Vector2(0.23625, 0.393403)
+scale = Vector2(0.41, 0.495336)
 texture = ExtResource("1_hqtmv")
 
 [node name="bulletarea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bulletarea"]
-position = Vector2(0, -1)
+visible = false
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_hqtmv")
